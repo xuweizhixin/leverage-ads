@@ -1,0 +1,69 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Pattern -->
+  <rect width="600" height="400" fill="#ffffff" />
+  <rect width="600" height="400" fill="url(#grid-pattern)" />
+  
+  <!-- Main Monitor/Screen -->
+  <rect x="100" y="60" width="400" height="280" rx="10" fill="#121212" stroke="#121212" stroke-width="6"/>
+  <rect x="110" y="70" width="380" height="260" rx="4" fill="#ffffff" stroke="#121212" stroke-width="3"/>
+  
+  <!-- Screen Content: AI Video Editing Interface -->
+  <!-- Top Bar -->
+  <rect x="130" y="90" width="340" height="30" rx="4" fill="#f3f3f3" stroke="#121212" stroke-width="3"/>
+  <circle cx="145" cy="105" r="6" fill="#ff3e00"/>
+  <circle cx="165" cy="105" r="6" fill="#0066ff"/>
+  <circle cx="185" cy="105" r="6" fill="#8427ff"/>
+  
+  <!-- Video Timeline -->
+  <rect x="130" y="230" width="340" height="50" rx="4" fill="#f3f3f3" stroke="#121212" stroke-width="3"/>
+  <rect x="150" y="240" width="60" height="30" rx="2" fill="#ff3e00" stroke="#121212" stroke-width="2"/>
+  <rect x="220" y="240" width="80" height="30" rx="2" fill="#0066ff" stroke="#121212" stroke-width="2"/>
+  <rect x="310" y="240" width="40" height="30" rx="2" fill="#8427ff" stroke="#121212" stroke-width="2"/>
+  <rect x="360" y="240" width="70" height="30" rx="2" fill="#ff3e00" stroke="#121212" stroke-width="2"/>
+  
+  <!-- Main Video Preview -->
+  <rect x="130" y="130" width="220" height="90" rx="4" fill="#f3f3f3" stroke="#121212" stroke-width="3"/>
+  <circle cx="240" cy="175" r="25" fill="#121212"/>
+  <polygon points="235,165 235,185 250,175" fill="#ffffff"/>
+  
+  <!-- AI Elements -->
+  <rect x="360" y="130" width="110" height="90" rx="4" fill="#f3f3f3" stroke="#121212" stroke-width="3"/>
+  
+  <!-- AI Elements: Brain Network -->
+  <circle cx="390" cy="150" r="8" fill="#ff3e00" stroke="#121212" stroke-width="2"/>
+  <circle cx="420" cy="140" r="6" fill="#0066ff" stroke="#121212" stroke-width="2"/>
+  <circle cx="440" cy="160" r="7" fill="#8427ff" stroke="#121212" stroke-width="2"/>
+  <circle cx="400" cy="175" r="5" fill="#0066ff" stroke="#121212" stroke-width="2"/>
+  <circle cx="430" cy="190" r="8" fill="#ff3e00" stroke="#121212" stroke-width="2"/>
+  
+  <!-- Connection Lines -->
+  <line x1="390" y1="150" x2="420" y2="140" stroke="#121212" stroke-width="2"/>
+  <line x1="420" y1="140" x2="440" y2="160" stroke="#121212" stroke-width="2"/>
+  <line x1="440" y1="160" x2="430" y2="190" stroke="#121212" stroke-width="2"/>
+  <line x1="430" y1="190" x2="400" y2="175" stroke="#121212" stroke-width="2"/>
+  <line x1="400" y1="175" x2="390" y2="150" stroke="#121212" stroke-width="2"/>
+  <line x1="420" y1="140" x2="400" y2="175" stroke="#121212" stroke-width="2"/>
+  
+  <!-- Decorative AI Elements -->
+  <rect x="130" y="300" width="340" height="20" rx="4" fill="#f3f3f3" stroke="#121212" stroke-width="3"/>
+  <rect x="140" y="305" width="100" height="10" rx="2" fill="#ff3e00"/>
+  <rect x="250" y="305" width="60" height="10" rx="2" fill="#0066ff"/>
+  <rect x="320" y="305" width="80" height="10" rx="2" fill="#8427ff"/>
+  
+  <!-- Floating Elements -->
+  <circle cx="50" cy="100" r="20" fill="#ff3e00" stroke="#121212" stroke-width="3"/>
+  <rect x="30" y="150" width="40" height="40" rx="4" fill="#0066ff" stroke="#121212" stroke-width="3"/>
+  <polygon points="50,220 30,250 70,250" fill="#8427ff" stroke="#121212" stroke-width="3"/>
+  
+  <circle cx="550" cy="100" r="20" fill="#8427ff" stroke="#121212" stroke-width="3"/>
+  <rect x="530" y="150" width="40" height="40" rx="4" fill="#ff3e00" stroke="#121212" stroke-width="3"/>
+  <polygon points="550,220 530,250 570,250" fill="#0066ff" stroke="#121212" stroke-width="3"/>
+  
+  <!-- Patterns -->
+  <defs>
+    <pattern id="grid-pattern" patternUnits="userSpaceOnUse" width="30" height="30" patternTransform="rotate(45)">
+      <rect width="30" height="30" fill="white"/>
+      <circle cx="15" cy="15" r="1" fill="#ff3e00" fill-opacity="0.2"/>
+    </pattern>
+  </defs>
+</svg> 

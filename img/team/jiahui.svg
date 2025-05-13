@@ -1,0 +1,17 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="90" cy="90" r="90" fill="#f3f3f3"/>
+  
+  <!-- Avatar Shape -->
+  <path d="M90 45 C116.5 45 138 66.5 138 93 V155 H42 V93 C42 66.5 63.5 45 90 45 Z" fill="#0066ff"/>
+  
+  <!-- Head -->
+  <circle cx="90" cy="75" r="30" fill="#8427ff"/>
+  
+  <!-- J for Jiahui -->
+  <path d="M75 110 V125 C75 130 85 130 90 130 C95 130 105 130 105 125" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="40" cy="40" r="10" fill="#ff3e00"/>
+  <circle cx="140" cy="40" r="10" fill="#ff3e00"/>
+</svg> 
