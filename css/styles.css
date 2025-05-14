@@ -3,20 +3,23 @@
 * Bold outline, high-contrast design
 */
 
-/* ---------- Base Styles & Variables ---------- */
+/* ---------- Lovart.ai Inspired Base Styles & Variables ---------- */
 :root {
-  --primary: #ff3e00;
-  --secondary: #0066ff;
-  --accent: #8427ff;
-  --dark: #121212;
-  --light: #ffffff;
-  --gray: #f3f3f3;
-  --text: #111111;
-  --outline-width: 3px;
-  --border-radius: 0px;
-  --transition: 0.3s ease;
-  --box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.9);
-  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --bg-main: #FFF7D1;
+  --bg-blue: #D6F2FF;
+  --bg-green: #D8FFD6;
+  --bg-white: #fff;
+  --primary: #18181b;
+  --accent: #A3FF6F;
+  --highlight: #B6F8A2;
+  --card-shadow: 0 4px 32px 0 rgba(0,0,0,0.08), 0 1.5px 6px 0 rgba(0,0,0,0.06);
+  --card-radius: 32px;
+  --transition: 0.25s cubic-bezier(.4,2,.6,1);
+  --font-main: 'Inter', 'Montserrat', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --text-main: #222;
+  --text-muted: #888;
+  --section-padding: 5rem 0;
+  --container-width: 1100px;
 }
 
 * {
@@ -31,50 +34,62 @@ html {
 
 body {
   font-family: var(--font-main);
-  line-height: 1.6;
-  color: var(--text);
-  background-color: var(--light);
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.7;
+  font-size: 1.15rem;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 800;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+  font-family: var(--font-main);
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+  line-height: 1.1;
 }
 
 h1 {
   font-size: 4rem;
-  letter-spacing: -0.05em;
-  margin-bottom: 1.5rem;
+  letter-spacing: -0.04em;
 }
 
 h2 {
-  font-size: 2.8rem;
-  letter-spacing: -0.03em;
-}
-
-h3 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   letter-spacing: -0.02em;
 }
 
+h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
 p {
+  color: var(--text-main);
   margin-bottom: 1.2rem;
 }
 
 a {
-  color: var(--primary);
+  color: var(--primary) !important;
   text-decoration: none;
-  transition: all var(--transition);
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s;
 }
 
 a:hover {
-  color: var(--accent);
+  color: var(--accent) !important;
 }
 
-ul {
-  list-style: none;
+a:not(.btn):not(.social-link):after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s;
 }
 
 img {
@@ -83,58 +98,80 @@ img {
 }
 
 .container {
-  width: 100%;
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
 }
 
 section {
-  padding: 6rem 0;
+  padding: var(--section-padding);
+  border-top: none !important;
+  border-bottom: none !important;
+  position: relative;
+  z-index: 1;
+}
+
+section + section {
+  margin-top: -1px;
 }
 
 .section-header {
-  text-align: center;
-  margin-bottom: 4rem;
+  text-align: left;
+  margin-bottom: 3.5rem;
+  position: relative;
 }
 
 .section-header h2 {
   display: inline-block;
-  padding: 0 1rem;
-  border: var(--outline-width) solid var(--dark);
-  box-shadow: var(--box-shadow);
-  background: var(--light);
-  margin-bottom: 1.5rem;
+  font-size: 2.7rem;
+  font-weight: 900;
+  background: none;
+  border: none;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section-header h2::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -0.7rem;
+  bottom: 0.18em;
+  width: 2.2em;
+  height: 0.5em;
+  background: var(--accent);
+  border-radius: 0.25em;
+  z-index: -1;
 }
 
 .section-header p {
-  font-size: 1.4rem;
-  max-width: 700px;
-  margin: 0 auto;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  max-width: 600px;
 }
 
 /* ---------- Buttons ---------- */
 .btn {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border: var(--outline-width) solid var(--dark);
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  transition: all var(--transition);
-  box-shadow: var(--box-shadow);
-  text-align: center;
-  font-size: 1rem;
-  margin: 0.5rem;
-  position: relative;
-  overflow: hidden;
+  background: var(--accent);
+  color: var(--primary) !important;
+  border: none;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 0.9rem 2.2rem;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow var(--transition), transform var(--transition), background var(--transition), color var(--transition);
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  letter-spacing: 0.01em;
 }
 
 .btn:hover {
-  transform: translate(-4px, -4px);
-  box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.9);
+  background: var(--primary);
+  color: var(--bg-white) !important;
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 12px 32px 0 rgba(0,0,0,0.18);
 }
 
 .btn-primary {
@@ -154,8 +191,9 @@ section {
   width: 100%;
   top: 0;
   z-index: 1000;
-  background-color: var(--light);
-  border-bottom: var(--outline-width) solid var(--dark);
+  background-color: var(--bg-white) !important;
+  border-bottom: none !important;
+  box-shadow: var(--card-shadow) !important;
 }
 
 .header .container {
@@ -167,13 +205,14 @@ section {
 .logo a {
   font-size: 1.8rem;
   font-weight: 900;
-  color: var(--text);
+  color: var(--primary) !important;
   letter-spacing: -0.05em;
-  border: var(--outline-width) solid var(--dark);
+  border: none !important;
   padding: 0.3rem 1rem;
-  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.9);
-  background: var(--primary);
-  color: var(--light);
+  box-shadow: var(--card-shadow) !important;
+  background: var(--accent) !important;
+  color: var(--primary) !important;
+  border-radius: 8px !important;
 }
 
 .nav ul {
@@ -221,9 +260,9 @@ section {
 
 /* ---------- Hero Section ---------- */
 .hero {
+  background: var(--bg-main) !important;
   padding: 12rem 0 6rem;
   position: relative;
-  background-color: var(--light);
   overflow: hidden;
 }
 
@@ -235,7 +274,7 @@ section {
   top: -50%;
   left: -50%;
   z-index: -1;
-  background-image: radial-gradient(circle, rgba(255, 62, 0, 0.1) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   background-size: 30px 30px;
 }
 
@@ -258,9 +297,9 @@ section {
 
 /* ---------- Problem Section ---------- */
 .problem {
-  background-color: var(--gray);
-  border-top: var(--outline-width) solid var(--dark);
-  border-bottom: var(--outline-width) solid var(--dark);
+  background: var(--bg-blue);
+  border-top: none !important;
+  border-bottom: none !important;
 }
 
 .pain-points {
@@ -270,27 +309,32 @@ section {
 }
 
 .pain-point {
-  background-color: var(--light);
-  padding: 2rem;
-  border: var(--outline-width) solid var(--dark);
-  box-shadow: var(--box-shadow);
-  transition: all var(--transition);
+  background: var(--bg-white);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: none;
+  padding: 2.2rem 2rem;
+  margin-bottom: 2.5rem;
+  transition: box-shadow var(--transition), transform var(--transition);
+  color: var(--primary) !important;
 }
 
 .pain-point:hover {
-  transform: translate(-5px, -5px);
-  box-shadow: 13px 13px 0px rgba(0, 0, 0, 0.9);
+  transform: translateY(-7px) scale(1.025);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
 }
 
 .pain-point .icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--primary);
+  color: var(--primary) !important;
 }
 
 /* ---------- Solution Section ---------- */
 .solution {
-  background-color: var(--light);
+  background: var(--bg-green);
+  border-top: none !important;
+  border-bottom: none !important;
 }
 
 .features {
@@ -300,30 +344,33 @@ section {
 }
 
 .feature {
-  padding: 2rem;
-  background-color: var(--light);
-  border: var(--outline-width) solid var(--dark);
-  box-shadow: var(--box-shadow);
-  transition: all var(--transition);
+  background: var(--bg-white);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: none;
+  padding: 2.2rem 2rem;
+  margin-bottom: 2.5rem;
+  transition: box-shadow var(--transition), transform var(--transition);
+  color: var(--primary) !important;
 }
 
 .feature:hover {
-  transform: translate(-5px, -5px);
-  box-shadow: 13px 13px 0px rgba(0, 0, 0, 0.9);
+  transform: translateY(-7px) scale(1.025);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
 }
 
 .feature-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--secondary);
+  color: var(--primary) !important;
 }
 
 /* ---------- Technology Section ---------- */
 .technology {
-  background-color: var(--dark);
+  background: var(--bg-white);
   color: var(--light);
-  border-top: var(--outline-width) solid var(--light);
-  border-bottom: var(--outline-width) solid var(--light);
+  border-top: none !important;
+  border-bottom: none !important;
 }
 
 .technology .section-header h2 {
@@ -340,21 +387,26 @@ section {
 }
 
 .tech {
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: var(--outline-width) solid var(--light);
-  box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.2);
-  transition: all var(--transition);
+  background: var(--bg-white);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: none;
+  padding: 2.2rem 2rem;
+  margin-bottom: 2.5rem;
+  transition: box-shadow var(--transition), transform var(--transition);
+  color: var(--primary) !important;
 }
 
 .tech:hover {
-  transform: translate(-5px, -5px);
-  box-shadow: 13px 13px 0px rgba(255, 255, 255, 0.2);
+  transform: translateY(-7px) scale(1.025);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
 }
 
 /* ---------- Market Section ---------- */
 .market {
-  background-color: var(--light);
+  background: var(--bg-main);
+  border-top: none !important;
+  border-bottom: none !important;
 }
 
 .market-info {
@@ -369,8 +421,10 @@ section {
   min-width: 300px;
   text-align: center;
   padding: 3rem 2rem;
-  border: var(--outline-width) solid var(--dark);
-  box-shadow: var(--box-shadow);
+  border: none !important;
+  background: var(--bg-white) !important;
+  border-radius: var(--card-radius) !important;
+  box-shadow: var(--card-shadow) !important;
 }
 
 .market-size h3 {
@@ -387,22 +441,26 @@ section {
 }
 
 .advantage {
-  padding: 1.5rem;
-  border: var(--outline-width) solid var(--dark);
-  box-shadow: var(--box-shadow);
-  transition: all var(--transition);
+  background: var(--bg-white);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: none;
+  padding: 2.2rem 2rem;
+  margin-bottom: 2.5rem;
+  transition: box-shadow var(--transition), transform var(--transition);
+  color: var(--primary) !important;
 }
 
 .advantage:hover {
-  transform: translate(-5px, -5px);
-  box-shadow: 13px 13px 0px rgba(0, 0, 0, 0.9);
+  transform: translateY(-7px) scale(1.025);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
 }
 
 /* ---------- Clients Section ---------- */
 .clients {
-  background-color: var(--gray);
-  border-top: var(--outline-width) solid var(--dark);
-  border-bottom: var(--outline-width) solid var(--dark);
+  background: var(--bg-blue);
+  border-top: none !important;
+  border-bottom: none !important;
 }
 
 .client-logos {
@@ -420,9 +478,10 @@ section {
   align-items: center;
   justify-content: center;
   background-color: var(--light);
-  border: var(--outline-width) solid var(--dark);
-  box-shadow: var(--box-shadow);
+  border: none !important;
+  box-shadow: var(--card-shadow) !important;
   transition: all var(--transition);
+  color: var(--primary) !important;
 }
 
 .logo:hover {
@@ -442,10 +501,19 @@ section {
 }
 
 .case {
-  padding: 2rem;
-  background-color: var(--light);
-  border: var(--outline-width) solid var(--dark);
-  box-shadow: var(--box-shadow);
+  background: var(--bg-white);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: none;
+  padding: 2.2rem 2rem;
+  margin-bottom: 2.5rem;
+  transition: box-shadow var(--transition), transform var(--transition);
+  color: var(--primary) !important;
+}
+
+.case:hover {
+  transform: translateY(-7px) scale(1.025);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
 }
 
 .metrics {
@@ -472,7 +540,7 @@ section {
 
 /* ---------- Team Section ---------- */
 .team {
-  background-color: var(--light);
+  background: var(--bg-green);
 }
 
 .team-strengths {
@@ -485,13 +553,14 @@ section {
 
 .strength {
   padding: 0.7rem 1.5rem;
-  background-color: var(--light);
-  border: var(--outline-width) solid var(--dark);
-  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.9);
+  background-color: var(--accent) !important;
+  border: none !important;
+  box-shadow: var(--card-shadow) !important;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.9rem;
   letter-spacing: 0.05em;
+  color: var(--primary) !important;
 }
 
 .team-members {
@@ -505,13 +574,14 @@ section {
 }
 
 .member-img {
-  width: 180px;
-  height: 180px;
-  margin: 0 auto 1.5rem;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
+  margin: 0 auto 1.2rem;
+  box-shadow: var(--card-shadow);
   overflow: hidden;
-  border: var(--outline-width) solid var(--dark);
-  box-shadow: var(--box-shadow);
+  background: var(--bg-blue);
+  border: none !important;
 }
 
 .member-img img {
@@ -538,28 +608,29 @@ section {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  border: var(--outline-width) solid var(--dark);
-  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.9);
-  background-color: var(--light);
-  color: var(--dark);
+  border: none !important;
+  box-shadow: var(--card-shadow) !important;
+  background-color: var(--accent) !important;
+  color: var(--primary) !important;
   font-weight: 700;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   transition: all var(--transition);
+  border-radius: 999px !important;
 }
 
 .social-link:hover {
   transform: translate(-2px, -2px);
   box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.9);
-  background-color: var(--primary);
-  color: var(--light);
+  background-color: var(--primary) !important;
+  color: var(--bg-white) !important;
 }
 
 /* ---------- Pricing Section ---------- */
 .pricing {
-  background-color: var(--gray);
-  border-top: var(--outline-width) solid var(--dark);
+  background: var(--bg-white);
+  border-top: none !important;
 }
 
 .pricing-options {
@@ -569,43 +640,56 @@ section {
 }
 
 .price-card {
-  background-color: var(--light);
-  border: var(--outline-width) solid var(--dark);
-  box-shadow: var(--box-shadow);
-  transition: all var(--transition);
-  display: flex;
-  flex-direction: column;
+  background: var(--bg-white);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: none;
+  padding: 0 !important;
+  overflow: hidden !important;
+  margin-bottom: 2.5rem;
+  transition: box-shadow var(--transition), transform var(--transition);
+  color: var(--primary) !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .price-card:hover {
-  transform: translate(-5px, -5px);
-  box-shadow: 13px 13px 0px rgba(0, 0, 0, 0.9);
+  transform: translateY(-7px) scale(1.025);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
 }
 
 .price-card.featured {
-  border-color: var(--primary);
-  transform: translateY(-20px);
+  background: var(--bg-white) !important;
+  border: 2px solid var(--accent) !important;
 }
 
 .price-card.featured:hover {
-  transform: translate(-5px, -25px);
+  transform: translateY(-15px) scale(1.025) !important;
+}
+
+.price-card.featured .card-header,
+.price-card .card-header {
+  background: var(--accent) !important;
+  color: var(--primary) !important;
+  font-weight: 800 !important;
 }
 
 .card-header {
-  padding: 2rem;
+  padding: 1.5rem 2rem !important;
   text-align: center;
-  border-bottom: var(--outline-width) solid var(--dark);
+  border-radius: var(--card-radius) var(--card-radius) 0 0 !important;
   background-color: var(--light);
 }
 
 .featured .card-header {
   background-color: var(--primary);
-  color: var(--light);
+  color: var(--bg-white) !important;
 }
 
 .card-body {
-  padding: 2rem;
-  flex-grow: 1;
+  flex: 1 !important;
+  background: transparent !important;
+  padding: 1.5rem 2rem !important;
 }
 
 .card-body ul {
@@ -622,29 +706,47 @@ section {
   content: '✓';
   position: absolute;
   left: 0;
-  color: var(--primary);
-  font-weight: bold;
+  color: var(--primary) !important;
+  font-weight: 900 !important;
 }
 
 .card-footer {
-  padding: 2rem;
-  border-top: var(--outline-width) solid var(--dark);
+  padding: 1.5rem 2rem !important;
+  border-top: none !important;
   text-align: center;
+  padding-top: 1rem !important;
+}
+
+.card-footer .btn,
+.card-footer button {
+  background: var(--accent) !important;
+  color: var(--primary) !important;
+  border: none !important;
+  border-radius: 999px !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+.card-footer .btn:hover,
+.card-footer button:hover {
+  background: var(--primary) !important;
+  color: var(--bg-white) !important;
+  transform: translateY(-4px) !important;
 }
 
 /* ---------- Contact Section ---------- */
 .contact {
-  background-color: var(--light);
-  border-top: var(--outline-width) solid var(--dark);
+  background: var(--bg-main);
+  border-top: none !important;
 }
 
 .contact-form {
   max-width: 700px;
   margin: 0 auto;
-  background-color: var(--light);
+  background: var(--bg-white);
   padding: 3rem;
-  border: var(--outline-width) solid var(--dark);
-  box-shadow: var(--box-shadow);
+  border: none !important;
+  box-shadow: var(--card-shadow);
+  color: var(--primary) !important;
 }
 
 .form-group {
@@ -655,7 +757,8 @@ section {
 .form-group textarea {
   width: 100%;
   padding: 1rem;
-  border: var(--outline-width) solid var(--dark);
+  border: 1px solid #ddd !important;
+  border-radius: 8px !important;
   font-family: var(--font-main);
   font-size: 1rem;
   transition: all var(--transition);
@@ -675,10 +778,11 @@ section {
 
 /* ---------- Footer ---------- */
 .footer {
-  background-color: var(--dark);
-  color: var(--light);
-  padding: 5rem 0 2rem;
-  border-top: var(--outline-width) solid var(--light);
+  background: var(--bg-blue);
+  color: var(--primary);
+  border: none;
+  box-shadow: none;
+  padding: 3rem 0 1.5rem;
 }
 
 .footer-content {
@@ -691,7 +795,7 @@ section {
 .footer-logo a {
   font-size: 1.8rem;
   font-weight: 900;
-  color: var(--light);
+  color: var(--primary);
   letter-spacing: -0.05em;
 }
 
@@ -705,12 +809,12 @@ section {
 }
 
 .footer-links ul li a {
-  color: var(--light);
-  font-weight: 500;
+  color: var(--primary);
+  font-weight: 600;
 }
 
 .footer-links ul li a:hover {
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .social-icons {
@@ -725,21 +829,22 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--light);
-  border-radius: 50%;
+  background-color: var(--accent) !important;
+  color: var(--primary) !important;
+  border-radius: 50% !important;
+  box-shadow: var(--card-shadow) !important;
   transition: all var(--transition);
 }
 
 .social-icons a:hover {
-  background-color: var(--primary);
-  transform: translateY(-5px);
+  background-color: var(--primary) !important;
+  color: var(--bg-white) !important;
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0,0,0,0.1) !important;
 }
 
 /* ---------- Responsive Styles ---------- */
@@ -826,9 +931,9 @@ section {
 
 /* ---------- Examples Section: Video Carousel ---------- */
 .examples {
-  background-color: var(--gray);
-  border-top: var(--outline-width) solid var(--dark);
-  border-bottom: var(--outline-width) solid var(--dark);
+  background: var(--bg-blue);
+  border-top: none !important;
+  border-bottom: none !important;
 }
 
 .video-carousel {
@@ -850,21 +955,22 @@ section {
 .carousel-item {
   min-width: 260px;
   max-width: 260px;
-  background: var(--light);
-  border: var(--outline-width) solid var(--dark);
-  box-shadow: var(--box-shadow);
-  border-radius: var(--border-radius);
+  background: var(--bg-white) !important;
+  border: none !important;
+  border-radius: var(--card-radius) !important;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: box-shadow 0.3s, transform 0.3s;
+  color: var(--primary) !important;
+  box-shadow: var(--card-shadow) !important;
 }
 
 .carousel-item video {
   width: 240px;
   height: 426px;
   background: #000;
-  border-radius: 8px;
+  border-radius: 8px !important;
   margin-top: 1rem;
 }
 
@@ -873,7 +979,7 @@ section {
   text-align: center;
   margin: 1rem 0 1rem 0;
   font-size: 1rem;
-  color: var(--text);
+  color: var(--primary) !important;
 }
 
 .carousel-btn {
@@ -881,10 +987,10 @@ section {
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
-  background: var(--light);
-  border: var(--outline-width) solid var(--dark);
-  box-shadow: var(--box-shadow);
-  color: var(--dark);
+  background: var(--bg-white) !important;
+  border: none !important;
+  box-shadow: var(--card-shadow) !important;
+  color: var(--primary) !important;
   font-size: 2rem;
   width: 48px;
   height: 48px;
@@ -905,8 +1011,8 @@ section {
 }
 
 .carousel-btn:hover {
-  background: var(--primary);
-  color: var(--light);
+  background: var(--primary) !important;
+  color: var(--bg-white) !important;
   box-shadow: 8px 8px 0px rgba(0,0,0,0.9);
 }
 
@@ -924,4 +1030,205 @@ section {
     height: 36px;
     font-size: 1.5rem;
   }
+}
+
+/* ---------- About/Company Introduction Section ---------- */
+.about {
+  background: var(--bg-white);
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.about-content {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 2;
+  min-width: 300px;
+}
+
+.about-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 340px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.media-mentions, .about-achievements {
+  margin: 1.5rem 0 1.5rem 1.5rem;
+  padding-left: 1.2rem;
+}
+
+.media-mentions li, .about-achievements li {
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--primary) !important;
+}
+
+.about-image img {
+  max-width: 320px;
+  border: none !important;
+  border-radius: 16px !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+.about-image-caption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .about-image {
+    max-width: 100%;
+  }
+}
+
+.about-image-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.4rem; }
+  section { padding: 2.5rem 0; }
+}
+
+/* 统一所有box-shadow */
+.carousel-btn, .market-size, .strength, .social-link {
+  box-shadow: var(--card-shadow) !important;
+}
+
+/* 确保卡片内容正确显示 */
+.card-header, .card-body, .card-footer {
+  padding: 1.5rem 2rem !important;
+}
+
+/* 移除所有黑色边框引用 */
+*[style*="border"] {
+  border-color: transparent !important;
+}
+
+/* 统一section之间的分割 */
+section {
+  position: relative;
+  z-index: 1;
+}
+
+section + section {
+  margin-top: -1px;
+}
+
+/* 清理carousel-item */
+.carousel-item {
+  box-shadow: var(--card-shadow) !important;
+}
+
+.carousel-item video {
+  border-radius: 8px !important;
+}
+
+/* 移除member-img边框 */
+.member-img {
+  border: none !important;
+}
+
+/* 修复所有黑色按钮 */
+.hero .btn,
+.contact-form .btn,
+input[type="submit"],
+button[type="submit"] {
+  background: var(--accent) !important;
+  color: var(--primary) !important;
+  border: none !important;
+  border-radius: 999px !important;
+  padding: 0.9rem 2.2rem !important;
+  font-weight: 800 !important;
+  box-shadow: var(--card-shadow) !important;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s !important;
+  text-align: center !important;
+}
+
+.hero .btn:hover,
+.contact-form .btn:hover,
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+  background: var(--primary) !important;
+  color: var(--bg-white) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15) !important;
+}
+
+/* 让链接有下划线效果 */
+a:not(.btn):not(.social-link):hover:after {
+  width: 100%;
+}
+
+/* 确保悬停状态的颜色对比度 */
+.social-icons a:hover,
+.btn:hover,
+button:hover {
+  color: white !important;
+  background: var(--primary) !important;
+}
+
+/* 确保列表项中的勾选标记清晰可见 */
+ul li:before,
+.card-body ul li::before {
+  color: var(--primary) !important;
+  font-weight: 900 !important;
+}
+
+/* 修复所有媒体/新闻提及的颜色对比 */
+.media-mentions li,
+.about-achievements li {
+  color: var(--primary) !important;
+}
+
+/* 确保卡片间的内容样式一致 */
+.price-card,
+.card-body,
+.card-footer {
+  border: none !important;
+  background: var(--bg-white) !important;
+}
+
+.card-body {
+  flex: 1 !important;
+}
+
+/* 价格卡片之间的调整 */
+.price-card.featured {
+  transform: translateY(-15px);
+}
+
+.price-card.featured:hover {
+  transform: translateY(-20px) scale(1.025) !important;
+}
+
+/* 统一按钮样式 */
+.carousel-btn,
+.btn,
+button[type="submit"],
+input[type="submit"] {
+  background: var(--accent) !important;
+  color: var(--primary) !important;
 } 
