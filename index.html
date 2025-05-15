@@ -123,53 +123,469 @@
         </div>
     </section>
 
-    <!-- Examples Section: Video Carousel -->
-    <section id="examples" class="examples section">
+    <section id="clients" class="clients section">
         <div class="container">
             <div class="section-header">
-                <h2>Ad Creative Examples</h2>
-                <p>See real AI-generated ad videos from our platform</p>
+                <h2>Success Stories</h2>
+                <p>Our clients' achievements with AI-powered creative automation</p>
             </div>
-            <div class="video-carousel">
-                <div class="carousel-track">
-                    <div class="carousel-item">
-                        <video controls poster="" width="240">
-                            <source src="videos/rizzkey/download (14).mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-caption">RizzKey Example</div>
+            
+            <!-- 公司选择栏 -->
+            <div class="client-tabs">
+                <div class="client-tab active" data-client="livein">
+                    <span>LiveIn</span>
+                </div>
+                <div class="client-tab" data-client="questionai">
+                    <span>Homework AI</span>
+                </div>
+                <div class="client-tab" data-client="polyai">
+                    <span>Poly.AI</span>
+                </div>
+                <div class="client-tab" data-client="rizzkey">
+                    <span>RizzKey</span>
+                </div>
+                <div class="client-tab" data-client="clapper">
+                    <span>Clapper</span>
+                </div>
+                <div class="client-tab" data-client="tiya">
+                    <span>Tiya</span>
+                </div>
+                <div class="client-tab" data-client="livehouse">
+                    <span>Livehouse</span>
+                </div>
+            </div>
+            
+            <!-- 公司成就展示区域 -->
+            <div class="client-info-container">
+                <!-- LiveIn 成就 -->
+                <div class="client-info active" id="livein-info">
+                    <div class="client-achievement">
+                        <div class="achievement-header">
+                            <div class="client-logo" onclick="openModal('videos/livein/img/livein-top1.png')">
+                                <img src="videos/livein/img/livein-top1.png" alt="LiveIn" class="client-logo-img">
+                            </div>
+                            <div class="achievement-content">
+                                <h3>LiveIn</h3>
+                                <p>Achieved #1 position in social app rankings with 2M+ DAU</p>
+                            </div>
+                        </div>
+                        <div class="achievement-metrics">
+                            <div class="metric">
+                                <span class="number">+45%</span>
+                                <span class="label">ROI Increase</span>
+                            </div>
+                            <div class="metric">
+                                <span class="number">#1</span>
+                                <span class="label">App Store Ranking</span>
+                            </div>
+                            <div class="metric">
+                                <span class="number">2M+</span>
+                                <span class="label">Daily Active Users</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <video controls poster="" width="240">
-                            <source src="videos/livein/LiveIn - Share Your Moment-2024-9-9-0-0--主素材-dd8d0fdfc003f54bec49614072325732.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-caption">LiveIn Example</div>
-                    </div>
-                    <div class="carousel-item">
-                        <video controls poster="" width="240">
-                            <source src="videos/polyai/US_240702_ZYY_06_男_AI_聊天_Poly_9_16_vid.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-caption">Poly.AI Example</div>
-                    </div>
-                    <div class="carousel-item">
-                        <video controls poster="" width="240">
-                            <source src="videos/questionai:answerai/22_1716951010.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-caption">Question.AI Example</div>
-                    </div>
-                    <div class="carousel-item">
-                        <video controls poster="" width="240">
-                            <source src="videos/电商植物/1.mov" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-caption">E-commerce Example</div>
+                    
+                    <!-- LiveIn 视频展示 -->
+                    <div class="client-videos">
+                        <h4>Campaign Creative Examples</h4>
+                        <div class="video-gallery">
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/livein/video/download 2 (1).mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Friends Sharing</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/livein/video/v12044gd0000c98tdvbc77u9v7mc7br0.MP4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Home Screen Widget</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/livein/video/v12044gd0000c9cev7bc77udj8cq7bmg 5.MP4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Photo Updates</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/livein/video/v12044gd0000ca2kamrc77u1jdagstv0 2.MP4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Social Connection</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/livein/video/v12044gd0000c9brhr3c77udpvg30gug 3.MP4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Widget Experience</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/livein/video/LiveIn - Share Your Moment-2024-9-9-0-0--主素材-dd8d0fdfc003f54bec49614072325732.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Moment Sharing</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <button class="carousel-btn left" aria-label="Scroll left">&#8592;</button>
-                <button class="carousel-btn right" aria-label="Scroll right">&#8594;</button>
+                
+                <!-- Question.AI 成就 -->
+                <div class="client-info" id="questionai-info">
+                    <div class="client-achievement">
+                        <div class="achievement-header">
+                            <div class="achievement-content full-width">
+                                <h3>Homework AI</h3>
+                                <p>Successfully launched multiple homework AI apps to #1 on US education charts.</p>
+                            </div>
+                        </div>
+                        <div class="achievement-metrics">
+                            <div class="metric">
+                                <span class="number">+120%</span>
+                                <span class="label">Conversion Rate</span>
+                            </div>
+                            <div class="metric">
+                                <span class="number">-40%</span>
+                                <span class="label">Cost Per Install</span>
+                            </div>
+                            <div class="metric">
+                                <span class="number">500K+</span>
+                                <span class="label">New Users</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Question.AI 视频展示 -->
+                    <div class="client-videos">
+                        <h4>Campaign Creative Examples</h4>
+                        <div class="video-gallery">
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/questionai:answerai/22_1716951010.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">News Integration</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/questionai:answerai/Question AI-1053 (1).mov" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">User Testimonial</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Poly.AI 成就 -->
+                <div class="client-info" id="polyai-info">
+                    <div class="client-achievement">
+                        <div class="achievement-header">
+                            <div class="achievement-content full-width">
+                                <h3>Poly.AI</h3>
+                                <p>Enhanced engagement for AI voice chat app</p>
+                            </div>
+                        </div>
+                        <div class="achievement-metrics">
+                            <div class="metric">
+                                <span class="number">+85%</span>
+                                <span class="label">Retention Rate</span>
+                            </div>
+                            <div class="metric">
+                                <span class="number">-35%</span>
+                                <span class="label">Acquisition Cost</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Poly.AI 视频展示 -->
+                    <div class="client-videos">
+                        <h4>Campaign Creative Examples</h4>
+                        <div class="video-gallery">
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/polyai/US_240702_ZYY_04_男_AI_聊天_Poly_9_16_vid.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">AI Conversation</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/polyai/US_240702_ZYY_06_男_AI_聊天_Poly_9_16_vid.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Voice Chat Experience</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/polyai/8265_1733548044.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">User Interaction</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/polyai/8250_1733547577.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Interactive Features</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- RizzKey 成就 -->
+                <div class="client-info" id="rizzkey-info">
+                    <div class="client-achievement">
+                        <div class="achievement-header">
+                            <div class="achievement-content full-width">
+                                <h3>RizzKey</h3>
+                                <p>Boosted keyboard app engagement with viral videos</p>
+                            </div>
+                        </div>
+                        <div class="achievement-metrics">
+                            <div class="metric">
+                                <span class="number">+70%</span>
+                                <span class="label">Install Rate</span>
+                            </div>
+                            <div class="metric">
+                                <span class="number">3.5M+</span>
+                                <span class="label">Video Views</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- RizzKey 视频展示 -->
+                    <div class="client-videos">
+                        <h4>Campaign Creative Examples</h4>
+                        <div class="video-gallery">
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/rizzkey/download (14).mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Text Experience</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/rizzkey/download (10).mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Social Messaging</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/rizzkey/81265599728821b084a1e63355fbff44_0_1716950846.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Quick Response</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/rizzkey/download (13).mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Typing Demo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Clapper 成就 -->
+                <div class="client-info" id="clapper-info">
+                    <div class="client-achievement">
+                        <div class="achievement-header">
+                            <div class="client-logo" onclick="openModal('videos/clapper/img/IMG_8888.PNG')">
+                                <img src="videos/clapper/img/IMG_8888.PNG" alt="Clapper" class="client-logo-img">
+                            </div>
+                            <div class="achievement-content">
+                                <h3>Clapper</h3>
+                                <p>Enhanced social video engagement and growth</p>
+                            </div>
+                        </div>
+                        <div class="achievement-metrics">
+                            <div class="metric">
+                                <span class="number">+60%</span>
+                                <span class="label">User Retention</span>
+                            </div>
+                            <div class="metric">
+                                <span class="number">4.2M+</span>
+                                <span class="label">Video Views</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Clapper 视频展示 -->
+                    <div class="client-videos">
+                        <h4>Campaign Creative Examples</h4>
+                        <div class="video-gallery">
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/clapper/video/0112CL-2.mov" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Creator Content</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/clapper/video/0207CL-6.mov" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">User Experience</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/clapper/video/1209-1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Platform Features</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/clapper/video/1209-3.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Community Engagement</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/clapper/video/clapper-对比-02.mov" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Comparison Demo</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/clapper/video/Clapper_250123_06_New app_EN.mov" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">New App Features</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tiya 成就 -->
+                <div class="client-info" id="tiya-info">
+                    <div class="client-achievement">
+                        <div class="achievement-header">
+                            <div class="client-logo" onclick="openModal('videos/tiya/img/ab327c8b-16f1-4cb5-8c66-c97bacfccd6f.jpeg')">
+                                <img src="videos/tiya/img/ab327c8b-16f1-4cb5-8c66-c97bacfccd6f.jpeg" alt="Tiya" class="client-logo-img">
+                            </div>
+                            <div class="achievement-content">
+                                <h3>Tiya</h3>
+                                <p>Grew voice chat application with viral marketing</p>
+                            </div>
+                        </div>
+                        <div class="achievement-metrics">
+                            <div class="metric">
+                                <span class="number">+55%</span>
+                                <span class="label">Download Growth</span>
+                            </div>
+                            <div class="metric">
+                                <span class="number">Top 5</span>
+                                <span class="label">Social App Ranking</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tiya 视频展示 -->
+                    <div class="client-videos">
+                        <h4>Campaign Creative Examples</h4>
+                        <div class="video-gallery">
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/tiya/video/v07044df0000busscnj6dngpb2vss7sg.MP4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Voice Chat Feature</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/tiya/video/v09044d60000bvjn3qvurhp2ku20utm0.MP4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Group Conversations</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Livehouse 成就 -->
+                <div class="client-info" id="livehouse-info">
+                    <div class="client-achievement">
+                        <div class="achievement-header">
+                            <div class="achievement-content full-width">
+                                <h3>Livehouse</h3>
+                                <p>Enhanced social video application experience</p>
+                            </div>
+                        </div>
+                        <div class="achievement-metrics">
+                            <div class="metric">
+                                <span class="number">Top 10</span>
+                                <span class="label">App Ranking</span>
+                            </div>
+                            <div class="metric">
+                                <span class="number">+65%</span>
+                                <span class="label">User Engagement</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Livehouse 视频展示 -->
+                    <div class="client-videos">
+                        <h4>Campaign Creative Examples</h4>
+                        <div class="video-gallery">
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/livehouse/video/Lark20240515-153922 3.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Live Broadcasting</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/livehouse/video/Lark20240515-153931 3.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Creator Highlights</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/livehouse/video/Lark20240515-153935 3.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">User Interaction</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/livehouse/video/Lark20240515-155549.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Content Discovery</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/livehouse/video/Lark20240515-155643.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Community Interaction</div>
+                            </div>
+                            <div class="video-item">
+                                <video controls poster="" width="240">
+                                    <source src="videos/livehouse/video/Lark20240515-155659.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="video-caption">Social Engagement</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -258,55 +674,6 @@
         </div>
     </section>
 
-    <section id="clients" class="clients section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Success Stories</h2>
-                <p>Trusted by innovative companies</p>
-            </div>
-            <div class="client-logos">
-                <div class="logo"><span>LiveIn</span></div>
-                <div class="logo"><span>Question.AI</span></div>
-                <div class="logo"><span>Poly.AI</span></div>
-                <div class="logo"><span>Answer.AI</span></div>
-                <div class="logo"><span>RizzKey</span></div>
-                <div class="logo"><span>Innate Vitality</span></div>
-                <div class="logo"><span>Palmstreet</span></div>
-                <div class="logo"><span>Filmora</span></div>
-            </div>
-            <div class="case-studies">
-                <div class="case">
-                    <h3>LiveIn</h3>
-                    <p>Achieved #1 position in social app rankings with 2M+ DAU</p>
-                    <div class="metrics">
-                        <div class="metric">
-                            <span class="number">+45%</span>
-                            <span class="label">ROI Increase</span>
-                        </div>
-                        <div class="metric">
-                            <span class="number">#1</span>
-                            <span class="label">App Store Ranking</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="case">
-                    <h3>Question.AI</h3>
-                    <p>Transformed campaign performance with AI-generated creatives</p>
-                    <div class="metrics">
-                        <div class="metric">
-                            <span class="number">+120%</span>
-                            <span class="label">Conversion Rate</span>
-                        </div>
-                        <div class="metric">
-                            <span class="number">-40%</span>
-                            <span class="label">Cost Per Install</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="team" class="team section">
         <div class="container">
             <div class="section-header">
@@ -365,10 +732,10 @@
                     <p>Our team brings together top talent from Google, Meta (Facebook), and TikTok, with deep expertise in advertising, content creation, and growth hacking. We have a proven track record, having helped 8 different companies reach the Top 10 in the U.S. app charts—including taking LiveIn to the #1 spot, ahead of TikTok, YouTube, and Instagram.</p>
                     <p>Our unique advantage lies in our data-driven approach, creative excellence, and hands-on experience with the most competitive digital markets in the world. We don't just run ads—we craft viral content and optimize every step of the user journey, ensuring maximum ROI for our clients.</p>
                     <ul class="media-mentions">
-                        <li><strong>TechCrunch:</strong> The next big social platform is the smartphone's homescreen</li>
+                        <li><strong>TechCrunch:</strong> <a href="https://techcrunch.com/2022/06/16/the-next-big-social-platform-isthe-smartphones-homescreen/" target="_blank">The next big social platform is the smartphone's homescreen</a></li>
                         <li><strong>Wall Street Journal:</strong> <a href="https://www.wsj.com/articles/the-rise-of-photo-widgets-portals-to-your-friends-iphone-home-screens-11652579737" target="_blank">The rise of photo widgets: portals to your friends' iPhone home screens</a></li>
                         <li><strong>Washington Post:</strong> <a href="https://www.washingtonpost.com/technology/2022/05/16/liven-locket-widget-kids/" target="_blank">How apps like LiveIn and Locket are changing the way kids use their phones</a></li>
-                        <li><strong>36Kr:</strong> <a href="https://www.36kr.com/p/1723868245329" target="_blank">Ranked above TikTok and SHEIN, why is this social app so popular? How 'dominant' social apps capture the hearts of young people in the West</a></li>
+                        <li><strong>36Kr:</strong> <a href="https://36kr.com/p/1730725253840136" target="_blank">Ranked above TikTok and SHEIN, why is this social app so popular? How 'dominant' social apps capture the hearts of young people in the West</a></li>
                     </ul>
                     <ul class="about-achievements">
                         <li>Helped 8+ companies reach Top 10 in the U.S. App Store</li>
@@ -512,5 +879,86 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 导航菜单切换
+            const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+            const nav = document.querySelector('.nav');
+            
+            if (mobileNavToggle) {
+                mobileNavToggle.addEventListener('click', function() {
+                    nav.classList.toggle('active');
+                    this.classList.toggle('active');
+                });
+            }
+            
+            // 视频轮播
+            const carouselTrack = document.querySelector('.carousel-track');
+            const carouselBtnLeft = document.querySelector('.carousel-btn.left');
+            const carouselBtnRight = document.querySelector('.carousel-btn.right');
+            
+            if (carouselTrack && carouselBtnLeft && carouselBtnRight) {
+                carouselBtnLeft.addEventListener('click', function() {
+                    carouselTrack.scrollBy({ left: -300, behavior: 'smooth' });
+                });
+                
+                carouselBtnRight.addEventListener('click', function() {
+                    carouselTrack.scrollBy({ left: 300, behavior: 'smooth' });
+                });
+            }
+            
+            // 客户标签切换
+            const clientTabs = document.querySelectorAll('.client-tab');
+            const clientInfos = document.querySelectorAll('.client-info');
+            
+            clientTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // 移除所有活跃标签
+                    clientTabs.forEach(t => t.classList.remove('active'));
+                    clientInfos.forEach(info => info.classList.remove('active'));
+                    
+                    // 添加当前活跃标签
+                    tab.classList.add('active');
+                    
+                    // 显示对应的客户信息
+                    const clientId = tab.getAttribute('data-client');
+                    const clientInfo = document.getElementById(`${clientId}-info`);
+                    if (clientInfo) {
+                        clientInfo.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Add JavaScript for image modal -->
+    <script>
+        // Modal functionality
+        function openModal(imgSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            
+            modal.style.display = 'flex';
+            modalImg.src = imgSrc;
+        }
+        
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html> 
